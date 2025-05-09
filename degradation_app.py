@@ -377,17 +377,17 @@ st.markdown("### 3. Regression Coefficients")
 
 # 1) Map internal names → LaTeX headers
 term_map = {
-    'Intercept':      'Intercept',
-    'MO':             r'$MO$',
-    'I(MO ** 2)':     r'$MO^2$',
-    'CFACuF':         r'$CFACuF$',
-    'I(CFACuF ** 2)': r'$CFACuF^2$',
-    'H2O2':           r'$H_2O_2$',
-    'I(H2O2 ** 2)':   r'$H_2O_2^2$',
-    'MO:CFACuF':      r'$MO \times CFACuF$',
-    'CFACuF:H2O2':    r'$CFACuF \times H_2O_2$',
-    'MO:H2O2':        r'$MO \times H_2O_2$'
+    'MO':             'MO',
+    'I(MO ** 2)':     r'MO^2',
+    'CFACuF':         'CFACuF',
+    'I(CFACuF ** 2)': r'CFACuF^2',
+    'H2O2':           r'H_2O_2',
+    'I(H2O2 ** 2)':   r'H_2O_2^2',
+    'MO:CFACuF':      r'MO\;\times\;CFACuF',
+    'CFACuF:H2O2':    r'CFACuF\;\times\;H_2O_2',
+    'MO:H2O2':        r'MO\;\times\;H_2O_2',
 }
+
 
 # 2) Build header row
 headers = ["Term"] + [term_map.get(t, t) for t in model.params.index]
